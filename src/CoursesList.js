@@ -1,8 +1,13 @@
 import React from "react";
 import courses from './coursesData';
 import CourseItem from './CourseItem';
+import CourseModal from './CourseModal';
 
 export default class CoursesList extends React.Component{
+    state = {
+        isModalOpen: true
+    };
+
     render(){
         return(
             <div className="container-fluid">
@@ -15,7 +20,12 @@ export default class CoursesList extends React.Component{
                         />;
                     })}
                 </div>
+                <CourseModal isOpen={this.state.isModalOpen}  handleClose={this.closeModal} />
             </div>
         )
     }
+    
+    closeModal = () => this.setState({ isModalOpen: false });
+    
+    openModal = () => this.setState({ isModalOpen: true });
 }
