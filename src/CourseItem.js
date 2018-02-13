@@ -19,7 +19,7 @@ export default class CourseItem extends React.Component{
                         <div className="course-item__footer">
                             <div className="course-item__footer__left">
                                 <p className="course-item__footer__left__counter font-weight-bold">x{this.formatNumber(this.props.counter)}</p>
-                                <button className="btn btn-info small-padding">INFO</button>
+                                <button className="btn btn-info small-padding" onClick={this.props.selectCourse}>INFO</button>
                                 <button className="btn btn-default small-padding">VIDEO</button>
                             </div>
                             <div className="course-item__footer__right">

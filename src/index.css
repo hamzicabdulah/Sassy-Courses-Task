@@ -13,13 +13,13 @@ body {
 /*-------GENERAL------------*/
 .btn{
   font-size:1.4rem;
-}*----------------------------*/
+}
+
+/*----------------------------*/
+/*-------COURSE ITEM------------*/
 .course-item{
     margin: 0;
     padding:0;
-}
-.course-item__container{
-
 }
 .course-item__container{
     display: flex;
@@ -109,6 +109,18 @@ body {
   background-color:#78909c; 
 }
 
+/*-------------------------*/
+/*-------dialog------------*/
+.dialog-container{
+  max-width:45rem;
+}
+
+.dialog__image{
+  width:100%;
+  max-height:20rem;
+  object-fit:cover;
+  margin-bottom:1rem;
+}
 
 /*-------------------------*/
 /*-------UTILS------------*/

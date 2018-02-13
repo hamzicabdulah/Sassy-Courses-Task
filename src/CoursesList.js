@@ -5,7 +5,8 @@ import CourseModal from './CourseModal';
 
 export default class CoursesList extends React.Component{
     state = {
-        isModalOpen: true
+        isModalOpen: false,
+        selectedCourse: {}
     };
 
     render(){
@@ -16,11 +17,16 @@ export default class CoursesList extends React.Component{
                         return <CourseItem 
                             key={course.id}
                             {...course}
+                            selectCourse={() => this.selectCourse(course)}
                             img='assets/1.jpg'
                         />;
                     })}
                 </div>
-                <CourseModal isOpen={this.state.isModalOpen}  handleClose={this.closeModal} />
+                <CourseModal 
+                    isOpen={this.state.isModalOpen}  
+                    handleClose={this.closeModal} 
+                    course={this.state.selectedCourse}
+                />
             </div>
         )
     }
@@ -28,4 +34,8 @@ export default class CoursesList extends React.Component{
     closeModal = () => this.setState({ isModalOpen: false });
     
     openModal = () => this.setState({ isModalOpen: true });
+    
+    selectCourse = (course) => {
+        this.setState({ selectedCourse: course }, () => this.openModal());
+    };
 }
