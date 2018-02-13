@@ -3,3 +3,108 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+/*-------------------------*/
+/*-------COURSE-ITEM------------*/
+
+.course-item{
+  margin: .5rem 0;
+}
+
+.course-item__container{
+      display: flex;
+    flex-direction: row;
+}
+
+.course-item__left{
+    position:relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+}
+
+.course-item__left__module{
+    position: absolute;
+    left: 0;
+    bottom: 15px;
+    margin:0;
+    background-color: #2BBBAD;
+    color: #fff;
+    padding: 3px 7px;
+}
+
+.course-item__img{
+  max-height: 100px;
+}
+
+.course-item__right{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 8px;
+}
+
+.course-item__right__top{
+  text-align:left; 
+}
+
+.course-item__right__top__title{
+  font-size:1.2rem;
+  font-weight:500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.course-item__footer{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.course-item__footer__left,
+.course-item__footer__right{
+ display:flex; 
+ align-items: center;
+}
+
+.course-item__footer__left__counter{
+  margin:0;
+  border-right: 1px solid #212529;
+  padding-right: 8px;
+  margin-right: 5px;
+}
+
+.course-item__footer__right__points{
+  width:25px;
+  height:25px;
+  border-radius:50%;
+}
+
+.course-item__footer__right__points:not(:last-child){
+  margin-right:5px;
+}
+
+.course-item__footer__right__points--done{
+  background-color:#00c851;
+}
+
+.course-item__footer__right__points--todo{
+  background-color:#78909c; 
+}
+
+
+/*-------------------------*/
+/*-------UTILS------------*/
+.small-padding{
+  padding: 6px 10px;
+}
+
+.mg-bottom-tiny{
+    margin-bottom: .2rem;
+}
+
+.mg-bottom-small{
+  margin-bottom: .5rem;
+}
