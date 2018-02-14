@@ -26,8 +26,8 @@ export default class CourseModal extends React.Component{
               bodyStyle={{borderTop:"none"}}
             >
                 <p className="font-weight-bold">{this.props.course.lesson2}</p>
-                <img className="dialog__image" src={this.props.course.image_url} />
-                <p>{this.props.course.description}</p>
+                <img className="dialog__image" src={this.props.course.image_url} alt={this.props.course.title} />
+                <p class="black-text">{this.props.course.description}</p>
             </Dialog>
         )
     }

@@ -12,15 +12,17 @@ export default class CoursesList extends React.Component{
     render(){
         return(
             <div className="container-fluid">
-                <div className="row">
-                    {courses.map(course => {
-                        return <CourseItem 
-                            key={course.id}
-                            {...course}
-                            selectCourse={() => this.selectCourse(course)}
-                            img='assets/1.jpg'
-                        />;
-                    })}
+                <div className="courses-list__container row">
+                    <div className="courses-list__group">
+                        {courses.map(course => {
+                            return <CourseItem 
+                                key={course.id}
+                                {...course}
+                                selectCourse={() => this.selectCourse(course)}
+                                img='assets/1.jpg'
+                            />;
+                        })}
+                    </div>
                 </div>
                 <CourseModal 
                     isOpen={this.state.isModalOpen}  

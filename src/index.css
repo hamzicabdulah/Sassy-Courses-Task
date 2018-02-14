@@ -14,18 +14,31 @@ body {
 .btn{
   font-size:1.4rem;
 }
-
+/*----------------------------*/
+/*-------COURSES LIST------------*/
+.courses-list__container{
+  display: flex;
+  flex-flow: column wrap;
+}
+.courses-list__group{
+  column-count: 3;
+  column-gap: 0;
+}
 /*----------------------------*/
 /*-------COURSE ITEM------------*/
 .course-item{
     margin: 0;
     padding:0;
+    -webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
+    break-inside: avoid-column;  
 }
 .course-item__container{
     display: flex;
     flex-direction: row;
     border-radius:0;
-    border:1px solid rgba(0, 0, 0, 0.12);
+    box-shadow:none !important;
+    border:1px solid rgba(0, 0, 0, 0.16) !important;
 }
 
 .course-item__left{
@@ -140,17 +153,26 @@ body {
 /*-------RESPONSIVE------------*/
 @media only screen and (min-width: 1030px) {
   .course-item{
-    margin: .8rem 0;
-    padding: 0 .5rem;
+    padding: .5rem;
   }
   .course-item__container{
-        box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+    border:none !important;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12) !important;
+  }
+}
+
+@media only screen and (max-width:982px){
+  .courses-list__group{
+    column-count: 2;  
   }
 }
 
 @media only screen and (max-width: 768px){
   html{
     font-size:56.25%;
+  }
+  .courses-list__group{
+    column-count: 1;  
   }
 }
 
